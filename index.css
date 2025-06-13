@@ -1,0 +1,126 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d1d1d1 0%, #b8b8b8 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #333;
+}
+
+.card {
+  background: #f5f5f5;
+  width: 50%;
+  max-width: 90vw;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem 3rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #2e2e2e;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f5;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6b7280; /* cinza médio */
+  flex: 1 0 40%;
+  user-select: text;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 1rem;
+  flex: 1 0 60%;
+  text-align: right;
+  color: #1f2937; /* cinza escuro */
+  user-select: text;
+  word-break: break-word;
+}
+
+.buttons {
+  margin-top: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: linear-gradient(135deg, #5a5a5a 0%, #464646 100%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.85rem 2.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+  user-select: none;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+}
+
+button span {
+    padding-left: 10px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #838383 0%, #525252 100%);
+  box-shadow: 0 12px 30px rgba(136, 136, 136, 0.5);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.2);
+}
+
+@media (max-width: 650px) {
+  .card {
+    padding: 2rem 1.5rem;
+  }
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .value {
+    text-align: left;
+    margin-top: 0.2rem;
+  }
+  button {
+    margin: 0.8rem 0.5rem;
+    width: 100%;
+  }
+}
